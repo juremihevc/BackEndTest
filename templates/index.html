@@ -1,14 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>About</title>
-	<link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
 	<h1>Welcome back to HTML ;)</h1>
+	<p>{{some_text}}</p>
+	<p>{{current_year}}</p>
+	{% for c in cities %}
+		<p>{{c}}</p>
+	{% endfor %}
+
+
+
 	<div><img src="/static/img/smartninja-logo.png"></div>
-	<div><a href="/about">About</a></div>
-	<div><a href="/portfolio">Portfolio</a></div>
-</body>
-</html>
+
+{% endblock content %}
